@@ -1,24 +1,28 @@
 '''
- Создайте класс Soda (газировка). Для инициализации
-есть параметр, который определяет вкус газировки. При
-инициализации этот параметр можно задавать, а можно и не
-задавать. Реализовать метод строковой репрезентации,
-который возвращает строку вроде «У вас газировка с
-<клубничным> вкусом», если вкус задан. Если вкус не задан,
-метод должен возвращать строку «У вас обычная газировка».
+Напишите программу с классом Math. При
+инициализации атрибутов нет. Реализовать методы addition,
+subtraction, multiplication и division. При передаче в методы
+двух числовых параметров нужно производить с
+параметрами соответствующие действия и печатать ответ.
 '''
-class Soda:
-    def __init__(self, taste=''):
-        self.taste = taste
+class Math:
+    @staticmethod
+    def addition(a, b):
+        return f'Сумма чисел {a + b}'
 
-    def __str__(self):
-        if len(self.taste) == 0:
-            return f'Вкус не задан'
-        else:
-            return f'У вас газировка с {self.taste} вкусом'
+    @staticmethod
+    def substraction(a, b):
+        return f'Рзаница чисел {a - b}'
 
-empty_soda = Soda()
-print(empty_soda)
+    @staticmethod
+    def multiplication(a, b):
+        return f'Произведение чисел {a * b}'
 
-soda = Soda('Клубничный')
-print(soda)
+    @staticmethod
+    def division(a, b):
+        return f'Деление чисел {a / b}'
+
+print(Math.substraction(10, 5))
+print(Math.addition(19, 3))
+print(Math.multiplication(11, 5))
+print(Math.division(20, 4))
